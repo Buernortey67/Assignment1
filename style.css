@@ -1,20 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-image: url('Pic1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: purple;
+    color: white;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: purple;
+    padding: 1rem;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
+    color: white;
 }
 
 nav ul {
@@ -24,113 +27,212 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #fff;
+    padding: 8px 16px; /* Adjust padding for nav links */
+    color: #cccccc; /* Lighter color for better visibility */
+    background-color: transparent; /* Ensure background is transparent */
     text-decoration: none;
 }
 
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* White color on hover */
 }
 
-section h2 {
-    margin-top: 0;
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#about,
+#video-section,
+#items,
+#catalogue {
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+}
+
+#video-section {
+    padding-top: 5rem; /* Adds space above the video section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-text {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .video-container {
     text-align: center;
 }
 
-.video-container video {
-    max-width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-container {
-    text-align: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.book-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.book {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    width: calc(33.333% - 40px);
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #fafafa;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.book h3 {
-    margin-top: 0;
-}
-
-.book img {
-    max-width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    margin: 10px;
-    max-width: calc(33.333% - 20px);
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+#video-section iframe {
+    width: 640px;
+    height: 480px;
+    border: none;
 }
 
 footer {
+    background-color: purple;
+    padding: 1rem;
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
+    color: white;
 }
 
-@media (max-width: 600px) {
-    .book {
-        width: calc(100% - 40px);
-    }
-
-    .gallery img {
-        max-width: calc(100% - 20px);
-    }
-
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-}
-body {
-    background-image: url('Background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* Optional: Add a background color as fallback */
-    background-color: #f8f8f8;
+footer .social-media a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
 }
 
+#item-list {
+    list-style: none;
+    padding: 0;
+}
+
+#item-list li {
+    margin: 0.5rem 0;
+}
+
+#item-list li a {
+    padding: 10px 20px; /* Adjust padding for item list links */
+    background-color: purple; /* Example background color */
+    color: white; /* Example text color */
+    text-decoration: none;
+}
+
+#item-list li a:hover {
+    text-decoration: underline;
+}
+
+.catalogue-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#carousel-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+/* Add a class to hide images by default */
+.hidden {
+    display: none;
+}
+
+/* Adjust the image container style */
+#items .image-container {
+    position: relative; /* Add positioning */
+    height: auto; /* Adjust height */
+}
+
+/* Adjust individual image position */
+#items .image-container img {
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Align images to the top */
+    left: 0; /* Align images to the left */
+    width: 100%; /* Make images fill the container width */
+    transition: top 0.5s; /* Add transition effect */
+}
+
+/* Adjust the position of subsequent images */
+#items .image-container img:nth-child(2) {
+    top: 100%; /* Move the second image down */
+}
+
+#items .image-container img:nth-child(3) {
+    top: 200%; /* Move the third image down */
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button img {
+    width: 60%; /* Adjust icon size */
+    height: auto;
+}
+
+/* Specific button and link styles for oval-like shape */
+.oval-button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed for your design */
+    border-radius: 25px; /* This will make the elements oval-like */
+    background-color: #ffffff; /* Adjust background color as needed */
+    color: #000000; /* Adjust text color as needed */
+    text-decoration: none;
+    border: none; /* Remove default border for buttons */
+    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effects */
+}
+
+.oval-button:hover {
+    background-color: #f0f0f0; /* Adjust hover background color */
+    color: #333333; /* Adjust hover text color */
+}
+
+/* Specific styles for social media icons */
+.social-media a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    margin-bottom: 1rem;
+}
+
+#about button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#about button:hover {
+    background-color: darkpurple;
+}
+/* Add space between the #about and #video-section sections */
+#about {
+    margin-bottom: 3rem; /* Adjust the value as needed */
+}
+
+#video-section {
+    margin-top: 3rem; /* Adjust the value as needed */
+}

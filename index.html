@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYUAD BOOKSTORE</title>
-    
+    <title>New York University Abu Dhabi Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <header>
-        <h1>Welcome to the NYUAD Bookstore</h1>
+        <div class="logo">NYUAD BOOKSTORE</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#books">Books</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="oval-button">Home</a></li>
+                <li><a href="#about" class="oval-button">About</a></li>
+                <li><a href="#items" class="oval-button">Items</a></li>
+                <li><a href="#contact" class="oval-button">Contact</a></li>
             </ul>
         </nav>
+        <div class="tagline">Explore the Heart of Our Bookstore</div>
     </header>
-    <section id="home">
-        <h2>Home</h2>
-        <p>Discover a wide range of books across various genres. From fiction to non-fiction, we have something for every reader.</p>
-        <iframe src="https://drive.google.com/file/d/1giKyx_HLVZZRMtANyIG0Jb-mCUiZJ-hd/preview" width="640" height="480" allow="autoplay"></iframe>
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Our bookshop has been serving book lovers for over 20 years. We pride ourselves on our diverse collection and customer service.</p>
-        <div class="image-container">
-            <img src="images/bookshop.jpg" alt="Bookshop">
-        </div>
-    </section>
-    <section id="books">
-        <h2>Books</h2>
-        <div class="book-list">
-            <div class="book">
-                <h3>Book Title 1</h3>
-                <p>Author: John Doe</p>
-                <p>Genre: Fiction</p>
-                <img src="images/book1.jpg" alt="Book 1">
+
+    <main>
+        <section id="about">
+            <h2>Welcome to the NYUAD Bookstore</h2>
+            <p>
+                Welcome to the New York University Abu Dhabi Bookstore, a hub of knowledge and culture offering a diverse selection of NYU books, merchandise, and more. Whether you are looking for the latest bestsellers, academic resources, or exclusive NYUAD apparel and accessories, our bookstore has something for everyone.
+            </p>
+            <p>
+                Explore our collection of books, accessories, and other New York University merchandise.
+            </p>
+            <button onclick="document.getElementById('video-section').scrollIntoView({behavior: 'smooth'});">Watch the Video</button>
+        </section>
+        
+        <section id="video-section">
+            <div class="video-text">
+                <h2>Directions to the Bookstore</h2>
+                <p>This film takes you from the outside of the humanities building (A6) into the heart of our bookstore.</p>
             </div>
-            <div class="book">
-                <h3>Book Title 2</h3>
-                <p>Author: Jane Smith</p>
-                <p>Genre: Mystery</p>
-                <img src="images/book2.jpg" alt="Book 2">
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1giKyx_HLVZZRMtANyIG0Jb-mCUiZJ-hd/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
-            <div class="book">
-                <h3>Book Title 3</h3>
-                <p>Author: Mark Brown</p>
-                <p>Genre: Biography</p>
-                <img src="images/book3.jpg" alt="Book 3">
-            </div>
-        </div>
-    </section>
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="images/gallery1.jpg" alt="Gallery Image 1">
-            <img src="images/gallery2.jpg" alt="Gallery Image 2">
-            <img src="images/gallery3.jpg" alt="Gallery Image 3">
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@bookshop.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </section>
+        </section>
+        
+
+        <section id="items">
+            <h2>Items</h2>
+                <p>
+                    Discover our extensive digital resources, bestsellers, academic textbooks, and timeless classics. Show your school spirit with NYU-branded T-shirts, sweatshirts, and hoodies. Explore exclusive NYU merchandise, perfect for gifts or personal keepsakes.
+                </p>
+              
+                <p>
+                    Click on the link below to explore the items in our electronic catalogue.
+                </p>
+                <ul id="item-list">
+     
+                    <li><a href="catalogue.html" id="catalogue-link" class="oval-button">Electronic Catalogue</a></li>
+                </ul>
+           
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="picture1.png" class="d-block w-100" alt="image1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="picture2.png" class="d-block w-100" alt="image2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="picture3.png" class="d-block w-100" alt="image3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        
+        </section>
+         
+    </main>
+
     <footer>
-        <p>&copy; 2024 Bookshop. All rights reserved.</p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact Information</p>
+            <ul>
+                <li>Email: bookstore@nyuad.edu</li>
+                <li>Phone: (123) 456-7890</li>
+                <li>Address: 129188 NYUAD, Saadiyat Marina district, Abu Dhabi</li>
+            </ul>
+        </section>
+        <div class="social-media">
+            <a href="https://www.instagram.com/nyubookstore/"><img src="instagram.png" alt="Instagram"></a>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
